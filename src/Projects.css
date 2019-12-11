@@ -32,7 +32,7 @@ body {
   width: 65vw;
   height: 35vw;
   background-color: white;
-  box-shadow: 2px 3px 10px #000;
+  box-shadow: 1px 3px 10px #000;
 }
 
 .card-name {
