@@ -1,0 +1,131 @@
+.App {
+  text-align: center;
+}
+
+.l-sidenav {
+  height: 86vh;
+  width: 0vw;
+  position: fixed;
+  z-index: 1;
+  top: 16vh;
+  left: 0;
+  background-color: red;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.r-sidenav {
+  height: 86vh;
+  width: 0vw;
+  position: fixed;
+  z-index: 1;
+  top: 16vh;
+  right: 0;
+  background-color: red;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav-screen {
+  display: none;
+  height: 86vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 0;
+  top: 16vh;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 16vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-container{
+  height: 84vh;
+  width: 100vw;
+  font-size: 0;
+}
+
+.Left-aside {
+  display: inline-block;
+  *display: inline;
+  inline: zoom;
+  zoom: 1;
+  vertical-align: top;
+  width: 14vw;
+  text-align: center;
+
+  min-height: 84vh;
+  background-color: grey;
+}
+
+.App-main {
+  display: inline-block;
+  *display: inline;
+  inline: zoom;
+  zoom: 1;
+  vertical-align: top;
+  font-size: 12px;
+  width: 72vw;
+
+  min-height: 84vh;
+}
+
+.Right-aside {
+  display: inline-block;
+  *display: inline;
+  inline: zoom;
+  zoom: 1;
+  vertical-align: top;
+  width: 14vw;
+  text-align: center;
+
+  min-height: 84vh;
+  background-color: grey;
+}
+
+.Nav-spacer {
+  min-height: 36vh;
+}
+
+.Nav-button {
+  display:inline-block;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 22px;
+}
+
+.Nav-button:hover {
+  background-color: #33BFFF;
+  color: white;
+}
+
+/* .circle-button {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+} */
+
+/* span {
+  display: inline-block;
+  vertical-align: middle;
+} */
+
+.App-link {
+  color: #61dafb;
+}
