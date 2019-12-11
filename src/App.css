@@ -13,6 +13,8 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 3vh;
+  border-radius: 0px 10px 0px 0px;
+  box-shadow: 0px 0px 25px 0px black;
 }
 
 .r-sidenav {
@@ -26,6 +28,8 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 3vh;
+  border-radius: 10px 0px 0px 0px;
+  box-shadow: 0px 0px 35px 0px black;
 }
 
 .sidenav-screen {
@@ -48,6 +52,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+  box-shadow: 0px 1px 20px 0px #282c34;
 }
 
 .App-container{
@@ -64,9 +70,9 @@
   vertical-align: top;
   width: 14vw;
   text-align: center;
-
   min-height: 84vh;
   background-color: grey;
+  box-shadow: inset -10px 45px 25px -15px #282c34;
 }
 
 .App-main {
@@ -77,8 +83,8 @@
   vertical-align: top;
   font-size: 12px;
   width: 72vw;
-
   min-height: 84vh;
+  /* box-shadow: inset 0px 10px 15px 8px #282c34; */
 }
 
 .Right-aside {
@@ -89,9 +95,9 @@
   vertical-align: top;
   width: 14vw;
   text-align: center;
-
   min-height: 84vh;
   background-color: grey;
+  box-shadow: inset -10px 45px 25px -15px #282c34;
 }
 
 .Nav-spacer {
@@ -166,19 +172,7 @@ A {
   color: white;
 }
 
-/* A {
-  border-style: solid;
-  border-color: white;
-} */
-
-/* .circle-button {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  background-color: blue;
-} */
-
-/* span {
-  display: inline-block;
-  vertical-align: middle;
-} */
+.main-home {
+  margin-top: 26vh;
+  font-size: calc(5px + 2vh);
+}
