@@ -1,9 +1,9 @@
 import React from 'react';
 import Sidebar from './subcomponents/Sidebar'
 
-const headerTitle = 'Error 404';
+const headerTitle = '<projects/>';
 
-function NoPageFound(props){
+function ProjectsPage(props){
   return (
     <>
       <header className="App-header">
@@ -26,4 +26,4 @@ function NoPageFound(props){
   )
 }
 
-export default NoPageFound;
+export default ProjectsPage;

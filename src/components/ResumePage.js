@@ -1,9 +1,9 @@
 import React from 'react';
 import Sidebar from './subcomponents/Sidebar'
 
-const headerTitle = 'Error 404';
+const headerTitle = '<hire me!/>';
 
-function NoPageFound(props){
+function ResumePage(props){
   return (
     <>
       <header className="App-header">
@@ -26,4 +26,4 @@ function NoPageFound(props){
   )
 }
 
-export default NoPageFound;
+export default ResumePage;

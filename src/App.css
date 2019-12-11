@@ -9,10 +9,10 @@
   z-index: 1;
   top: 16vh;
   left: 0;
-  background-color: red;
+  background-color: lightgrey;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 3vh;
 }
 
 .r-sidenav {
@@ -22,10 +22,10 @@
   z-index: 1;
   top: 16vh;
   right: 0;
-  background-color: red;
+  background-color: lightgrey;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 3vh;
 }
 
 .sidenav-screen {
@@ -37,10 +37,6 @@
   top: 16vh;
   background-color: black;
   opacity: 0.5;
-}
-
-.nav-items {
-  list-style-type: none;
 }
 
 .App-header {
@@ -118,6 +114,63 @@
   color: white;
 }
 
+.sidenav-items {
+  padding: 0;
+  list-style-type: none;
+  font-size: 2vmin;
+}
+
+.sidenav-items li {
+  display: block;
+  vertical-align: middle;
+  /* padding: 4px 16px; */
+  padding: .7vh;
+  width: inherit;
+  min-height: 4vh;
+  color: #000;
+  /* background-color: darkgrey; */
+  line-height: 4vh;
+  margin: 1vh 0 1vh 0;
+}
+
+.sidenav-links li:hover {
+  background-color: #FFF;
+}
+
+.sidenav-links li:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #33BFFF;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.sidenav-links li:hover:after {
+  transform: scaleX(1);
+}
+
+.sidenav-links li A.active{
+  background-color: #FFF;
+}
+
+A {
+  text-decoration: none;
+}
+
+.sb-close {
+  background-color: grey;
+}
+
+.sb-close:hover {
+  background-color: #33BFFF;
+  color: white;
+}
+
+/* A {
+  border-style: solid;
+  border-color: white;
+} */
+
 /* .circle-button {
   border-radius: 50%;
   height: 100px;
@@ -129,7 +182,3 @@
   display: inline-block;
   vertical-align: middle;
 } */
-
-.App-link {
-  color: #61dafb;
-}

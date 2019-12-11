@@ -2,82 +2,27 @@ import React from 'react';
 import './App.css';
 
 import SideNav from './SideNav';
-import HomePage from './HomePage';
-import AboutPage from './AboutPage';
+import NoPageFound from './components/NoPageFound';
 
-// import {useRoutes, A} from 'hookrouter';
-// import routes from "./router"
-
-// const homeTitle = '<codeby.me/>';
-// const rightArrow = '>';
-// const leftArrow = '<';
+import { useRoutes } from 'hookrouter';
+import routes from "./router"
 
 // TODO make different navigation for screens smaller than 992px
 
-function openNav(pos) {
-  switch (pos){
-    case 'right':
-      document.getElementById("sidenav-screen").style.display = "block";
-      document.getElementById("r-Sidenav").style.width = "28vw";
-    break;
-    case 'left':
-      document.getElementById("sidenav-screen").style.display = "block";
-      document.getElementById("l-Sidenav").style.width = "28vw";
-    break;
-    default:
-    break;
-  }
-}
-
-function closeNav(pos) {
-  switch (pos){
-    case 'left':
-      document.getElementById("l-Sidenav").style.width = "0";
-      document.getElementById("sidenav-screen").style.display = "none";
-    break;
-    case 'right':
-      document.getElementById("r-Sidenav").style.width = "0";
-      document.getElementById("sidenav-screen").style.display = "none";
-    break;
-    default:
-      document.getElementById("r-Sidenav").style.width = "0";
-      document.getElementById("sidenav-screen").style.display = "none";
-      document.getElementById("l-Sidenav").style.width = "0";
-      document.getElementById("sidenav-screen").style.display = "none";
-    break;
-  }
-}
-
-function handleClick(btn) {
-  switch (btn) {
-    case 'NAV-SCREEN':
-      closeNav()
-    break;
-    case 'LNAV-CLOSE':
-      console.log('Close Left Sidenav');
-      closeNav('left');
-    break;
-    case 'RNAV-CLOSE':
-      console.log('Close Left Sidenav');
-      closeNav('right');
-    break;
-    case 'LBTN':
-      console.log('LBTN');
-      openNav('left');
-    break;
-    case 'RBTN':
-      console.log('RBTN');
-      openNav('right');
-    break;
-  }
+function closeNavScreen() {
+  document.getElementById("r-Sidenav").style.width = "0";
+  document.getElementById("sidenav-screen").style.display = "none";
+  document.getElementById("l-Sidenav").style.width = "0";
+  document.getElementById("sidenav-screen").style.display = "none";
 }
 
 function App() {
+  const routeResult = useRoutes(routes);
   return (
     <div className="App">
-      <SideNav id={'l-Sidenav'} className={'l-sidenav'} handleClick={() => handleClick('LNAV-CLOSE')}/>
-      <SideNav id={'r-Sidenav'} className={'r-sidenav'} handleClick={() => handleClick('RNAV-CLOSE')}/>
-      <div id="sidenav-screen" className="sidenav-screen" onClick={() => handleClick('NAV-SCREEN')}></div>
+      <SideNav id='l-Sidenav' className='l-sidenav' pos='left'/>
+      <SideNav id='r-Sidenav' className='r-sidenav' pos='right'/>
+      <div id="sidenav-screen" className="sidenav-screen" onClick={() => closeNavScreen()}></div>
       {routeResult || <NoPageFound />}
     </div>
   );
@@ -85,6 +30,55 @@ function App() {
 
 export default App;
 
+// function handleClick(btn) {
+//   switch (btn) {
+//     case 'NAV-SCREEN':
+//       closeNav()
+//     break;
+//     case 'LNAV-CLOSE':
+//       console.log('Close Left Sidenav');
+//       closeNav('left');
+//     break;
+//     case 'RNAV-CLOSE':
+//       console.log('Close Left Sidenav');
+//       closeNav('right');
+//     break;
+//   }
+// }
+
+// function closeNav(pos) {
+//   switch (pos){
+//     case 'left':
+//       document.getElementById("l-Sidenav").style.width = "0";
+//       document.getElementById("sidenav-screen").style.display = "none";
+//     break;
+//     case 'right':
+//       document.getElementById("r-Sidenav").style.width = "0";
+//       document.getElementById("sidenav-screen").style.display = "none";
+//     break;
+//     default:
+//       document.getElementById("r-Sidenav").style.width = "0";
+//       document.getElementById("sidenav-screen").style.display = "none";
+//       document.getElementById("l-Sidenav").style.width = "0";
+//       document.getElementById("sidenav-screen").style.display = "none";
+//     break;
+//   }
+// }
+
+// function openNav(pos) {
+//   switch (pos){
+//     case 'right':
+//       document.getElementById("sidenav-screen").style.display = "block";
+//       document.getElementById("r-Sidenav").style.width = "28vw";
+//     break;
+//     case 'left':
+//       document.getElementById("sidenav-screen").style.display = "block";
+//       document.getElementById("l-Sidenav").style.width = "28vw";
+//     break;
+//     default:
+//     break;
+//   }
+// }
 
 // <HomePage handleClickLeft={() => handleClick('LBTN')} handleClickRight={() => handleClick('RBTN')}/>
 
