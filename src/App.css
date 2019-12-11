@@ -149,7 +149,7 @@
   transform: scaleX(1);
 }
 
-.sidenav-links li A.active{
+.sidenav-links .active{
   background-color: #FFF;
 }
 

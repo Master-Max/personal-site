@@ -26,11 +26,11 @@ function SideNav(props) {
     <div id={props.id} className={props.className}>
       <ul className='sidenav-items'>
         <div className='sidenav-links'>
-          <A href="/" onClick={() => closeNav()}><li>HOME</li></A>
-          <A href="/about" onClick={() => closeNav()}><li>ABOUT</li></A>
-          <A href="/resume" onClick={() => closeNav()}><li>HIRE_ME!</li></A>
-          <A href="/projects" onClick={() => closeNav()}><li>PROJECTS</li></A>
-          <A href="/blogs" onClick={() => closeNav()}><li>BLOG</li></A>
+          <A href="/" onClick={() => closeNav()}><li className={props.homeClass}>HOME</li></A>
+          <A href="/about" onClick={() => closeNav()}><li className={props.aboutClass}>ABOUT</li></A>
+          <A href="/resume" onClick={() => closeNav()}><li className={props.resumeClass} >HIRE_ME!</li></A>
+          <A href="/projects" onClick={() => closeNav()}><li className={props.projectsClass}>PROJECTS</li></A>
+          <A href="/blogs" onClick={() => closeNav()}><li className={props.blogsClass}>BLOG</li></A>
         </div>
         <li className='sb-close' onClick={() => closeNav()}><span>{props.pos === "left" ? <b>{'<'}</b> : <b>{'>'}</b>}</span></li>
       </ul>

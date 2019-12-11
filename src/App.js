@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import SideNav from './SideNav';
+// import SideNav from './SideNav';
 import NoPageFound from './components/NoPageFound';
 
 import { useRoutes } from 'hookrouter';
@@ -9,26 +9,27 @@ import routes from "./router"
 
 // TODO make different navigation for screens smaller than 992px
 
-function closeNavScreen() {
-  document.getElementById("r-Sidenav").style.width = "0";
-  document.getElementById("sidenav-screen").style.display = "none";
-  document.getElementById("l-Sidenav").style.width = "0";
-  document.getElementById("sidenav-screen").style.display = "none";
-}
+// function closeNavScreen() {
+//   document.getElementById("r-Sidenav").style.width = "0";
+//   document.getElementById("sidenav-screen").style.display = "none";
+//   document.getElementById("l-Sidenav").style.width = "0";
+//   document.getElementById("sidenav-screen").style.display = "none";
+// }
 
 function App() {
   const routeResult = useRoutes(routes);
   return (
     <div className="App">
-      <SideNav id='l-Sidenav' className='l-sidenav' pos='left'/>
-      <SideNav id='r-Sidenav' className='r-sidenav' pos='right'/>
-      <div id="sidenav-screen" className="sidenav-screen" onClick={() => closeNavScreen()}></div>
       {routeResult || <NoPageFound />}
     </div>
   );
 }
 
 export default App;
+
+// <SideNav id='l-Sidenav' className='l-sidenav' pos='left'/>
+// <SideNav id='r-Sidenav' className='r-sidenav' pos='right'/>
+// <div id="sidenav-screen" className="sidenav-screen" onClick={() => closeNavScreen()}></div>
 
 // function handleClick(btn) {
 //   switch (btn) {
