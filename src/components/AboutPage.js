@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from './subcomponents/Sidebar';
 import SideNav from './SideNav';
+// import './css/About.scss'
 
 const headerTitle = '<about/>';
 

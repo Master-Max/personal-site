@@ -1,5 +1,50 @@
+$highlightColor : pink;
+$accentColor : #33BFFF;
+$contrastColor : orange;
+$brightTone : white;
+$lightTone : lightgrey;
+$midTone : grey;
+$darkTone : black;
+$lightShadow : darkgrey;
+$midShadow : #282c34;
+$darkShadow : black;
+$lightTextColor : white;
+$darkTextColor : black;
+
+$highlightColor : pink;
+$headerColor : pink;
+$accentColor: pink;
+
+
+// $highlightColor : pink;
+// $accentColor : #b8d8ba;
+// $contrastColor : orange;
+// $brightTone : #fcddbc;
+// $lightTone : #d9dbbc;
+// $midTone : #ff959d;
+// $darkTone : #69585f;
+// $lightShadow : #ff959d;
+// $midShadow : #282c34;
+// $darkShadow : #69585f;
+// $lightTextColor : #fcddbc;
+// $darkTextColor : #69585f;
+
+// $highlightColor : pink;
+// $accentColor : #76047c;
+// $contrastColor : orange;
+// $brightTone : #39007a;
+// $lightTone : #8f7182;
+// $midTone : #66567b;
+// $darkTone : #3c365b;
+// $lightShadow : #8f7182;
+// $midShadow : #66567b;
+// $darkShadow : #17102a;
+// $lightTextColor : #8e0b58;;
+// $darkTextColor : #3c365b;
+
 .App {
   text-align: center;
+  font-family: 'Nunito', sans-serif;
 }
 
 .l-sidenav {
@@ -9,12 +54,12 @@
   z-index: 1;
   top: 16vh;
   left: 0;
-  background-color: lightgrey;
+  background-color: $lightTone;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 3vh;
   border-radius: 0px 10px 0px 0px;
-  box-shadow: 0px 0px 25px 0px black;
+  box-shadow: 0px 0px 25px 0px $darkShadow;
 }
 
 .r-sidenav {
@@ -24,12 +69,12 @@
   z-index: 1;
   top: 16vh;
   right: 0;
-  background-color: lightgrey;
+  background-color: $lightTone;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 3vh;
   border-radius: 10px 0px 0px 0px;
-  box-shadow: 0px 0px 35px 0px black;
+  box-shadow: 0px 0px 35px 0px $darkShadow;
 }
 
 .sidenav-screen {
@@ -51,9 +96,9 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $headerColor;
   position: relative;
-  box-shadow: 0px 1px 20px 0px #282c34;
+  box-shadow: 0px 1px 20px 0px $midShadow;
 }
 
 .App-container{
@@ -71,8 +116,8 @@
   width: 14vw;
   text-align: center;
   min-height: 84vh;
-  background-color: grey;
-  box-shadow: 4px 0px 10px 0px darkgrey;
+  background-color: $midTone;
+  box-shadow: 4px 0px 10px 0px $lightShadow;
 }
 
 .App-main {
@@ -96,29 +141,35 @@
   width: 14vw;
   text-align: center;
   min-height: 84vh;
-  background-color: grey;
-  box-shadow: -4px 0px 10px 0px darkgrey;
+  background-color: $midTone;
+  box-shadow: -4px 0px 10px 0px $lightTextColor;
 }
 
 .Nav-spacer {
-  min-height: 36vh;
-  box-shadow: inset 0px 45px 25px -20px #282c34;
+  min-height: 35vh;
+  box-shadow: inset 0px 45px 25px -20px $midShadow;
+  /* background-color: pink; */
 }
 
 .Nav-button {
   display:inline-block;
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  background-color: grey;
+  height: calc(100px + 2vw);
+  width: calc(100px + 2vw);
+  background-color: $midTone;
   text-align: center;
   vertical-align: middle;
-  font-size: 22px;
+  font-size: calc(22px + .5vw);
+  color: $darkTextColor;
 }
 
 .Nav-button:hover {
-  background-color: #33BFFF;
-  color: white;
+  background-color: $accentColor;
+  color: $lightTextColor;
+}
+
+.Nav-bot-spacer {
+
 }
 
 .sidenav-items {
@@ -134,20 +185,21 @@
   padding: .7vh;
   width: inherit;
   min-height: 4vh;
-  color: #000;
+  color: $darkTextColor;
   /* background-color: darkgrey; */
   line-height: 4vh;
   margin: 1vh 0 1vh 0;
 }
 
 .sidenav-links li:hover {
-  background-color: #FFF;
+  background-color: $brightTone;
+  color: $darkTextColor;
 }
 
 .sidenav-links li:after {
   display: block;
   content: '';
-  border-bottom: solid 3px #33BFFF;
+  border-bottom: solid 3px $accentColor;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
@@ -157,7 +209,8 @@
 }
 
 .sidenav-links .active{
-  background-color: #FFF;
+  background-color: $accentColor;
+  color: $lightTextColor;
 }
 
 A {
@@ -165,12 +218,16 @@ A {
 }
 
 .sb-close {
-  background-color: grey;
+  height: 6vh;
+  line-height: 6vh;
+  vertical-align: middle;
+  font-size: calc(22px + .5vw);
+  background-color: $midTone;
 }
 
 .sb-close:hover {
-  background-color: #33BFFF;
-  color: white;
+  background-color: $accentColor;
+  color: $lightTextColor;
 }
 
 .main-home {

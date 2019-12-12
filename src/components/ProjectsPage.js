@@ -2,9 +2,10 @@ import React from 'react';
 import Sidebar from './subcomponents/Sidebar'
 import SideNav from './SideNav';
 import ProjectCard from './subcomponents/ProjectCard'
-import '../Projects.css';
+// import './css/Projects.css';
+// import './css/Projects.scss';
 
-const headerTitle = '<projects/>';
+const headerTitle = '<PROJECTS/>';
 
 const c1 = <ProjectCard name='C1' body='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'/>
 const c2 = <ProjectCard name='C2' body='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'/>
@@ -35,7 +36,7 @@ function ProjectsPage(props) {
       <SideNav id='l-Sidenav' className='l-sidenav' pos='left' projectsClass='active'/>
       <SideNav id='r-Sidenav' className='r-sidenav' pos='right' projectsClass='active'/>
       <div id="sidenav-screen" className="sidenav-screen" onClick={() => closeNavScreen()}></div>
-      <header className="App-header">
+      <header className="App-header orange-c">
         <h1>{headerTitle}</h1>
       </header>
       <div className="App-container">

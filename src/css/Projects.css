@@ -42,7 +42,7 @@ body {
   border-radius: 25px 25px 0px 0px;
   text-align: center;
   line-height: 6vw;
-  border-bottom: 3px solid orange;
+  border-bottom: 6px solid #33BFFF;
 }
 
 .card-body {

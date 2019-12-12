@@ -1,0 +1,22 @@
+$headerColor : teal;
+$accentColor: teal;
+
+.App-header {
+  color: $headerColor;
+}
+
+.Nav-button:hover {
+  background-color: $accentColor;
+}
+
+.sidenav-links li:after {
+  border-bottom: solid 3px $accentColor;
+}
+
+.sidenav-links .active{
+  background-color: $accentColor;
+}
+
+.sb-close:hover {
+  background-color: $accentColor;
+}

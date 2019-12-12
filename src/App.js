@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
-
+import './css/App.css';
+import './css/Projects.css'
+// import './App.scss';
 // import SideNav from './SideNav';
 import NoPageFound from './components/NoPageFound';
 
@@ -19,9 +20,14 @@ import routes from "./router"
 function App() {
   const routeResult = useRoutes(routes);
   return (
-    <div className="App">
-      {routeResult || <NoPageFound />}
-    </div>
+    <>
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"></link>
+      </head>
+      <div className="App">
+        {routeResult || <NoPageFound />}
+      </div>
+    </>
   );
 }
 

@@ -23,6 +23,7 @@ function Sidebar(props){
       <div className="Nav-button" onClick={() => openNav(props.pos)}>
         <h1>{props.buttonIcon}</h1>
       </div>
+      <div className="Nav-bot-spacer"></div>
     </aside>
   )
 }

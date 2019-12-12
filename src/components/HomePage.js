@@ -1,8 +1,9 @@
 import React from 'react';
 import Sidebar from './subcomponents/Sidebar';
 import SideNav from './SideNav';
+// import './css/Home.scss';
 
-const headerTitle = '<codeby.me/>';
+const headerTitle = '<CODEDBY.ME/>';
 
 function closeNavScreen() {
   document.getElementById("r-Sidenav").style.width = "0";
