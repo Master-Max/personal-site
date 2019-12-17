@@ -23,7 +23,7 @@ function closeNav(pos) {
 
 function SideNav(props) {
   return (
-    <div id={props.id} className={props.className}>
+    <div id={props.id} className={'sidenav ' + props.className}>
       <ul className='sidenav-items'>
         <div className='sidenav-links'>
           <A href="/" onClick={() => closeNav()}><li className={props.homeClass}>HOME</li></A>
@@ -32,7 +32,9 @@ function SideNav(props) {
           <A href="/projects" onClick={() => closeNav()}><li className={props.projectsClass}>PROJECTS</li></A>
           <A href="/blogs" onClick={() => closeNav()}><li className={props.blogsClass}>BLOG</li></A>
         </div>
-        <li className='sb-close' onClick={() => closeNav()}><span>{props.pos === "left" ? <b>{'<'}</b> : <b>{'>'}</b>}</span></li>
+        <div className='sidenav-close' onClick={() => closeNav()}>
+          <li><span>{props.pos === "left" ? <b>{'<'}</b> : <b>{'>'}</b>}</span></li>
+        </div>
       </ul>
     </div>
   );

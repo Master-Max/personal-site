@@ -19,11 +19,11 @@ function openNav(pos) {
 function Sidebar(props){
   return (
     <aside className={props.className}>
-      <div className="Nav-spacer"></div>
-      <div className="Nav-button" onClick={() => openNav(props.pos)}>
+      <div className="sidebar-spacer"></div>
+      <div className="sidebar-button" onClick={() => openNav(props.pos)}>
         <h1>{props.buttonIcon}</h1>
       </div>
-      <div className="Nav-bot-spacer"></div>
+      <div className="sidebar-bot-spacer"></div>
     </aside>
   )
 }

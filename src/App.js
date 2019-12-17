@@ -1,6 +1,8 @@
 import React from 'react';
 import './css/App.css';
-import './css/Projects.css'
+import './css/Projects.css';
+import './css/SideBar.css';
+import './css/SideNav.css';
 // import './App.scss';
 // import SideNav from './SideNav';
 import NoPageFound from './components/NoPageFound';
@@ -21,9 +23,7 @@ function App() {
   const routeResult = useRoutes(routes);
   return (
     <>
-      <head>
-        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"></link>
-      </head>
+      <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"></link>
       <div className="App">
         {routeResult || <NoPageFound />}
       </div>

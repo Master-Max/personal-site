@@ -1,0 +1,88 @@
+.sidenav{
+  height: 86vh;
+  width: 0vw;
+  position: fixed;
+  z-index: 1;
+  top: 16vh;
+  background-color: lightgrey;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.l-sidenav {
+  left: 0;
+  border-radius: 0px 10px 0px 0px;
+  box-shadow: 0px 0px 35px 0px black;
+}
+
+.r-sidenav {
+  right: 0;
+  border-radius: 10px 0px 0px 0px;
+  box-shadow: 0px 0px 35px 0px black;
+}
+
+
+.sidenav-items{
+  margin-top: 2vh;
+}
+
+.sidenav-links{
+  padding: 0;
+  list-style-type: none;
+  font-size: 2vmin;
+}
+
+.sidenav-links li {
+  display: block;
+  vertical-align: middle;
+  padding: .7vh;
+  width: inherit;
+  height: 4vh;
+  color: #000;
+  line-height: 4vh;
+  margin: 1vh 0 1vh 0;
+}
+
+.sidenav-links li:hover {
+  background-color: #FFF;
+  color: black;
+}
+
+.sidenav-links li:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #33BFFF;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.sidenav-links li:hover:after {
+  transform: scaleX(1);
+}
+
+.sidenav-links .active{
+  background-color: #33BFFF;
+  color: white;
+}
+
+A {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.sidenav-close{
+  height: 10vw;
+  vertical-align: middle;
+  font-size: 2.5vw;
+  line-height: 10vw;
+  text-align: center;
+  background-color: white;
+}
+
+.sidenav-close:hover {
+  background-color: #33BFFF;
+  color: white;
+}

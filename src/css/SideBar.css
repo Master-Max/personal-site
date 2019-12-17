@@ -1,0 +1,45 @@
+
+
+aside{
+  display: inline-block;
+  /* *display: inline;
+  inline: zoom; */
+  zoom: 1;
+  vertical-align: top;
+  width: 14vw;
+  text-align: center;
+  min-height: 84vh;
+  background-color: grey;
+}
+
+.Left-aside{
+  box-shadow: 4px 0px 10px 0px darkgrey;
+}
+
+.Right-aside{
+  box-shadow: -4px 0px 10px 0px darkgrey;
+}
+
+.sidebar-spacer{
+  height: 34vh;
+  box-shadow: inset 0px 45px 25px -20px #282c34;
+}
+
+.sidebar-button{
+  display: inline-block;
+  border-radius: 50%;
+  height: 10vw;
+  width: 10vw;
+  /* max-width: calc(100px + 2vw);
+  max-height: calc(100px + 2vw); */
+  background-color: grey;
+  vertical-align: middle;
+  font-size: 2.5vw;
+  line-height: 4vw;
+  text-align: center;
+}
+
+.sidebar-button:hover {
+  background-color: #33BFFF;
+  color: white;
+}
